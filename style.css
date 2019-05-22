@@ -13,18 +13,19 @@ h1{
 marquee{
     background-color: red;
     color: white;
-    padding: 5px;
+    padding: 8px;
     border-bottom: 2px solid white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 header{
+    top: 0px;
     position: sticky;
     background-color: black; 
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between; 
 }
-nav{
-    margin-left: auto;
-}
+
 .logo{
     padding:10px 25px;
 }
@@ -45,10 +46,11 @@ a{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 .about{
     flex-direction: column;
-    text-align: center;
+    
 }
 .about p{
     border-top: 1px solid black;
@@ -107,6 +109,7 @@ h3,p{
     min-width: 300px;
     text-align: center;
 }
+/*  WIP*/
 .images{
     
 
@@ -163,6 +166,10 @@ figcaption>button{
     border: 1px solid #212121;
     color: #212121;
 }
+ #contact button:hover{
+    background-color: #160d0e;
+     color: rgb(218, 203, 175); 
+  }
 footer{
     text-align: center; 
     background-color: rgb(33, 33, 33);
