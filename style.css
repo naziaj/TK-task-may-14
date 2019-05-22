@@ -1,84 +1,102 @@
 body{
-    background-image: url(images/floral.png);
+    height: 100%;
 }
 *{
     margin: 0%;
+}
+marquee{
+    background-color: red;
+    color: white;
+    padding: 7px;
+    border-bottom: 3px solid white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+/* header starts */
+header{
+    position: sticky;
+    top: 0px;
+    background-color:#0000008c; 
+    display: flex;
+    justify-content: space-between; 
+    z-index: 1000;
+}
+
+.logo{
+    height: 60px;
+    padding:10px 25px;
+}
+li{ 
+    display: inline-block;
+
+}
+ul{
+    list-style: none; 
+    padding-top: 25px;  
+}
+header>ul{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+a{  
+     
+    padding:0 1em;;
+    text-decoration: none;
+    color: rgb(236, 235, 235);
+    font-family: 'Montserrat', sans-serif;
+} 
+/* End */
+main{
+    background-image: url(images/floral.png);
+}
+/* section about Tech Karo starts */
+#about-tk{
+    background-color:rgb(241, 141, 151, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about{
+    text-align: center;
 }
 h1{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 4em; 
     padding: 62px;
-     
-}
-marquee{
-    background-color: red;
-    color: white;
-    padding: 8px;
-    border-bottom: 2px solid white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-}
-header{
-    top: 0px;
-    position: sticky;
-    background-color: black; 
-    display: flex;
-    justify-content: space-between; 
-}
-
-.logo{
-    padding:10px 25px;
-}
-li{
-    list-style: none;
-    display: inline;
-    padding: 15px;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-   
-}
-#about-tk{
-    background-color:rgb(241, 141, 151, 0.8);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.about{
-    flex-direction: column;
-    
 }
 .about p{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 20px;
     font-size: 1.5em;
-    width: 700px;
+    width: 600px;
     min-width: 300px;
-   
-    
+    max-width: 800;   
 }
 .about button{ 
     border: none;
     background-color:#160d0e;
     color: pink;
-    padding: 30px 50px;
+    padding: 1em 3em;
     font-size: 2em;
     margin: 1em;
 }
+/* End */
+/* section Services starts */
 h2{
     text-align: center;
     font-family: 'Sofia', cursive;
     font-weight: bold;
     font-size: 2em;
     padding: 1.1em;
+    color: #222;
 }
 h3,p{
     font-family: 'Montserrat', sans-serif;
+    color: #222;
 }
 #services{
     background-color: rgb(239, 236, 231, 0.7);
@@ -93,69 +111,89 @@ h3,p{
     font-size: 120px;
 }
 .html, .css, .java{
-     margin: 20px;
-     text-align: center;
+    margin: 20px;
+    text-align: center;
 }
-
+/* End */
+/* section portfolio starts */
 #portfolio{
+    z-index: 999;
     background-color: rgb(221, 206, 180, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #portfolio >p{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 20px;
     font-size: 1.5em;
-    width: 700px;
+    width: 600px;
     min-width: 300px;
-    text-align: center;
+    max-width: 800px; 
 }
-/*  WIP*/
-.images{
+.container{
+    margin: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,250px);
+    grid-template-rows: auto;
+    grid-gap: 35px 70px;  
+}
+figure{
+    position: relative;
+    display: inline-block;
+    height: 200px;	
+    margin: 1em;
     
-
-}
+}    
 figure>img{
-    width: 250px;
-    height: 200px;
-    border-radius: 8px;
-}
-figure:hover>figcaption{
-    display: block;
-  
+    border-radius: 10px;
+    height: 100%;  
+    width: 100%;
 }
 figcaption{
-        display: none;
-        position: absolute;
-     
-}
-figcaption>h3{
+    display: none; 
+	border-radius: 10px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    background-color: rgb(0,0,0,0.80);
+    position: absolute;
+    justify-content:center; 
+    text-align: center;
+    flex-direction: column;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-}  
-/* WIP */
-figcaption>button{
-    border-radius: 40px;
-    font-size: 1.5em;
-    width: 60px;
-    height: 60px;
+
+}
+figure:hover figcaption{
+    display: flex;
+}
+ /* buttun styling */
+figcaption button{
+    border-radius: 50px;
+    font-size: 1.2em;
+    width: 50px;
+    height: 50px; 
     padding: 10px;
-    margin: 10px;
+    margin: 20px 5px 5px 5px; 
     border:1px solid white;
     color: white;
-    background-color: #160d0e;
-    opacity: 6.5;
+    background-color: rgb(0,0,0,0.3);  
 }
-
+/* end */
+/* section contact starts */
 #contact{
     background-color: rgb(175, 199, 198, 0.7);
 }
-#contact >.buttons{
+#contact >.cnt-buttons{
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
 }
-.buttons>button{
+.cnt-buttons>button{
     margin: 10px;
     width: 90px;
     height: 90px;
@@ -166,10 +204,12 @@ figcaption>button{
     border: 1px solid #212121;
     color: #212121;
 }
- #contact button:hover{
+#contact button:hover{
     background-color: #160d0e;
-     color: rgb(218, 203, 175); 
-  }
+    color: rgb(218, 203, 175);
+}
+/* End */
+/* footer starts */
 footer{
     text-align: center; 
     background-color: rgb(33, 33, 33);
@@ -184,4 +224,61 @@ footer:hover i{
 .fas{
     margin: 4px;
     font-size: 1.2em;
+}
+/* End */
+@media (max-width:350px){
+header>logo{
+height: 40px;
+}
+header ul>a{
+font-size: 12px;
+padding: 0 0.3em;
+}
+/* h1{
+    font-size: 3em;
+}
+.about >button{
+    pad
+} */
+.column p,#portfolio p,.about>p{
+    width: 260;
+    min-width: 200;
+    max-width: 300px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}  
+}
+@media (max-width: 800px) {
+    .column{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .column>p{
+        width: 400px;
+    }
+    
+    #portfolio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,250px);
+        grid-template-rows: auto;
+        grid-gap: 0px 50px;
+    }
+} 
+
+   
+    
+    
 }
