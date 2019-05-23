@@ -96,7 +96,7 @@ h2{
 }
 h3,p{
     font-family: 'Montserrat', sans-serif;
-    color: #222;
+    color: white;
 }
 #services{
     background-color: rgb(239, 236, 231, 0.7);
@@ -163,12 +163,10 @@ figcaption{
     justify-content:center; 
     text-align: center;
     flex-direction: column;
-}
-figcaption>h3{
 	  color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-}
+}	
 figure:hover figcaption{
     display: flex;
 }
@@ -282,4 +280,4 @@ padding: 0 0.3em;
    
     
     
-}
+
